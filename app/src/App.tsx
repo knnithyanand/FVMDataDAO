@@ -1,18 +1,19 @@
 import React from "react";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import "./App.css";
-import { Footer, Navbar, Services, Transactions, Welcome } from "./components";
+import { Layout, Home, Market, NoPage } from "./pages";
 
 function App() {
   return (
-    <div className="min-h-screen">
-      <div className="gradient-bg-welcome">
-        <Navbar />
-        <Welcome />
-      </div>
-      <Services />
-      <Transactions />
-      <Footer />
-    </div>
+    <BrowserRouter>
+    <Routes>
+      <Route path="/" element={<Layout />}>
+        <Route index element={<Home />} />
+        <Route path="market" element={<Market />} />
+        <Route path="*" element={<NoPage />} />
+      </Route>
+    </Routes>
+  </BrowserRouter>
   );
 }
 

@@ -1,69 +1,55 @@
 import React from "react";
-import { HiMenuAlt4 } from "react-icons/hi";
-import { AiOutlineClose } from "react-icons/ai";
 
 import logo from "../images/logo.png";
 
+const navigation = [
+  { name: "Market", href: "/market" },
+  { name: "Exchange", href: "/exchange" },
+  { name: "Wallet", href: "/wallet" },
+  { name: "My Data", href: "/,y-data" },
+];
 export default function Navbar() {
-  const [toggleMenu, setToggleMenu] = React.useState(false);
   return (
-    <nav className="flex w-full items-center justify-between p-4 md:justify-center">
-      <div className="flex-initial items-center justify-center md:flex-[0.5]">
-        <img src={logo} alt="logo" className="w-32 cursor-pointer" />
-      </div>
-      <ul className="hidden flex-initial list-none flex-row items-center justify-between text-white md:flex">
-        {["Market", "Exchange", "Tutorials", "Wallets"].map((item, index) => (
-          <NavBarItem key={item + index} title={item} />
-        ))}
-        <li className="mx-4 cursor-pointer rounded-full bg-[#2952e3] py-2 px-7 hover:bg-[#2546bd]">
-          Login
-        </li>
-      </ul>
-      <div className="relative flex">
-        {!toggleMenu && (
-          <HiMenuAlt4
-            fontSize={28}
-            className="cursor-pointer text-white md:hidden"
-            onClick={() => setToggleMenu(true)}
-          />
-        )}
-        {toggleMenu && (
-          <AiOutlineClose
-            fontSize={28}
-            className="cursor-pointer text-white md:hidden"
-            onClick={() => setToggleMenu(false)}
-          />
-        )}
-        {toggleMenu && (
-          <ul
-            className="blue-glassmorphism animate-slide-in fixed -top-0 -right-0 z-10 flex h-screen w-full list-none
-            flex-col items-end justify-start rounded-md p-3 text-white shadow-2xl md:hidden"
-          >
-            <li className="my-2 text-3xl">
-              <AiOutlineClose onClick={() => setToggleMenu(false)} />
-            </li>
-            {["Market", "Exchange", "Tutorials", "Wallets"].map(
-              (item, index) => (
-                <NavBarItem
-                  key={item + index}
-                  title={item}
-                  classprops="my-2 text-lg"
-                />
-              )
-            )}
-          </ul>
-        )}
-      </div>
-    </nav>
+    <header className="bg-indigo-600">
+      <nav className="mx-auto max-w-7xl px-6 lg:px-8" aria-label="Top">
+        <div className="flex w-full items-center justify-between border-b border-indigo-500 py-6 lg:border-none">
+          <div className="flex items-center">
+            <a href="/">
+              <img src={logo} alt="logo" className="w-32 cursor-pointer" />
+            </a>
+            <div className="ml-10 hidden space-x-8 lg:block">
+              {navigation.map((link) => (
+                <a
+                  key={link.name}
+                  href={link.href}
+                  className="text-base font-medium text-white hover:text-indigo-50"
+                >
+                  {link.name}
+                </a>
+              ))}
+            </div>
+          </div>
+          <div className="ml-10 space-x-4">
+            <a
+              href="/#"
+              className="inline-block rounded-md border border-transparent bg-white py-2 px-4 text-base font-medium text-indigo-600 hover:bg-indigo-50"
+            >
+              Login
+            </a>
+          </div>
+        </div>
+        <div className="flex flex-wrap justify-center gap-x-6 py-4 lg:hidden">
+          {navigation.map((link) => (
+            <a
+              key={link.name}
+              href={link.href}
+              className="text-base font-medium text-white hover:text-indigo-50"
+            >
+              {link.name}
+            </a>
+          ))}
+        </div>
+      </nav>
+    </header>
   );
-}
-
-function NavBarItem({
-  title,
-  classprops,
-}: {
-  title: string;
-  classprops?: string;
-}) {
-  return <li className={`mx-4 cursor-pointer ${classprops}`}>{title}</li>;
 }
