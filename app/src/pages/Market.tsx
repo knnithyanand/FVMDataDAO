@@ -12,6 +12,34 @@ const sites = [
     volume: "32812",
     url: "https://www.google.com/maps/search/?api=1&query=10.0000,76.0000",
   },
+  {
+    name: "MG_Quarry.1",
+    mineral: "Granite(Building Stone)",
+    district: "Thiruvananthapuram",
+    volume: "32812",
+    url: "https://www.google.com/maps/search/?api=1&query=10.0000,76.0000",
+  },
+  {
+    name: "MG_Quarry.1",
+    mineral: "Granite(Building Stone)",
+    district: "Thiruvananthapuram",
+    volume: "32812",
+    url: "https://www.google.com/maps/search/?api=1&query=10.0000,76.0000",
+  },
+  {
+    name: "MG_Quarry.1",
+    mineral: "Granite(Building Stone)",
+    district: "Thiruvananthapuram",
+    volume: "32812",
+    url: "https://www.google.com/maps/search/?api=1&query=10.0000,76.0000",
+  },
+  {
+    name: "MG_Quarry.1",
+    mineral: "Granite(Building Stone)",
+    district: "Thiruvananthapuram",
+    volume: "32812",
+    url: "https://www.google.com/maps/search/?api=1&query=10.0000,76.0000",
+  },
 ];
 
 export default function Market() {
