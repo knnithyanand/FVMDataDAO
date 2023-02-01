@@ -25,7 +25,7 @@ export const QuarryDataset = [
         ]
     },
     {
-        id: 1,
+        id: 2,
         name: "Quarry Data 2006",
         location: "Kerala, India",
         publisher: "Ministry of Minies",
@@ -50,7 +50,7 @@ export const QuarryDataset = [
         ]
     },
     {
-        id: 1,
+        id: 3,
         name: "Quarry Data 2007",
         location: "Kerala, India",
         publisher: "Ministry of Minies",
@@ -75,7 +75,7 @@ export const QuarryDataset = [
         ]
     },
     {
-        id: 1,
+        id: 4,
         name: "Quarry Data 2008",
         location: "Kerala, India",
         publisher: "Ministry of Minies",
@@ -100,7 +100,7 @@ export const QuarryDataset = [
         ]
     },
     {
-        id: 1,
+        id: 5,
         name: "Quarry Data 2009",
         location: "Kerala, India",
         publisher: "Ministry of Minies",
@@ -125,7 +125,7 @@ export const QuarryDataset = [
         ]
     },
     {
-        id: 1,
+        id: 6,
         name: "Quarry Data 2010",
         location: "Kerala, India",
         publisher: "Ministry of Minies",
@@ -150,7 +150,7 @@ export const QuarryDataset = [
         ]
     },
     {
-        id: 1,
+        id: 7,
         name: "Quarry Data 2011",
         location: "Kerala, India",
         publisher: "Ministry of Minies",
@@ -175,7 +175,7 @@ export const QuarryDataset = [
         ]
     },
     {
-        id: 1,
+        id: 8,
         name: "Quarry Data 2012",
         location: "Kerala, India",
         publisher: "Ministry of Minies",
@@ -200,7 +200,7 @@ export const QuarryDataset = [
         ]
     },
     {
-        id: 1,
+        id: 9,
         name: "Quarry Data 2013",
         location: "Kerala, India",
         publisher: "Ministry of Minies",
@@ -225,7 +225,7 @@ export const QuarryDataset = [
         ]
     },
     {
-        id: 1,
+        id: 10,
         name: "Quarry Data 2015",
         location: "Kerala, India",
         publisher: "Ministry of Minies",
