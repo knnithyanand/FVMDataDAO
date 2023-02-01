@@ -1,10 +1,7 @@
-export default function Transactions
-() {
+export default function Transactions() {
   return (
-    <div className="Transactions
-    ">
-      <h1 className="text-xl font-bold">Transactions
-      </h1>
+    <div className="Transactions">
+      <h1>Transactions</h1>
     </div>
   );
 }

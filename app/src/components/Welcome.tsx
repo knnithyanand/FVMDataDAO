@@ -37,18 +37,32 @@ export default function Welcome() {
             for analysis and share the results with the community.
           </p>
 
-          <div className="mt-10 grid w-full grid-cols-2 sm:grid-cols-3">
-            <div className={`rounded-tl-2xl ${companyCommonStyles}`}>
-              Reliabile
+          <dl className="mt-10 text-center sm:mx-auto sm:grid sm:max-w-3xl sm:grid-cols-3 sm:gap-8">
+            <div className="flex flex-col">
+              <dt className="order-2 mt-2 text-lg font-medium leading-6 text-indigo-200">
+                Pepperoni
+              </dt>
+              <dd className="order-1 text-5xl font-bold tracking-tight text-white">
+                100%
+              </dd>
             </div>
-            <div className={companyCommonStyles}>Trustworthy</div>
-            <div className={companyCommonStyles}>Filecoin</div>
-            <div className={companyCommonStyles}>Web 3.0</div>
-            <div className={companyCommonStyles}>Low Fees</div>
-            <div className={`rounded-br-2xl ${companyCommonStyles}`}>
-              Blockchain
+            <div className="mt-10 flex flex-col sm:mt-0">
+              <dt className="order-2 mt-2 text-lg font-medium leading-6 text-indigo-200">
+                Delivery
+              </dt>
+              <dd className="order-1 text-5xl font-bold tracking-tight text-white">
+                24/7
+              </dd>
             </div>
-          </div>
+            <div className="mt-10 flex flex-col sm:mt-0">
+              <dt className="order-2 mt-2 text-lg font-medium leading-6 text-indigo-200">
+                Calories
+              </dt>
+              <dd className="order-1 text-5xl font-bold tracking-tight text-white">
+                100k+
+              </dd>
+            </div>
+          </dl>
         </div>
       </div>
     </div>
