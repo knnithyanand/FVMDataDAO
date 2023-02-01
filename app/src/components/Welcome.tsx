@@ -1,29 +1,3 @@
-const companyCommonStyles =
-  "min-h-[70px] sm:px-0 px-2 sm:min-w-[120px] flex justify-center items-center border-[0.5px] border-gray-400 text-sm font-light text-white";
-
-const Input = ({
-  placeholder,
-  name,
-  type,
-  value,
-  handleChange,
-}: {
-  placeholder: string;
-  name: string;
-  type: string;
-  value: string;
-  handleChange: (e: React.ChangeEvent<HTMLInputElement>, name: string) => void;
-}) => (
-  <input
-    placeholder={placeholder}
-    type={type}
-    step="0.0001"
-    value={value}
-    onChange={(e) => handleChange(e, name)}
-    className="white-glassmorphism my-2 w-full rounded-sm border-none bg-transparent p-2 text-sm text-white outline-none"
-  />
-);
-
 export default function Welcome() {
   return (
     <div className="flex w-full items-center justify-center">

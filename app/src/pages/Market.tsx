@@ -1,9 +1,5 @@
 import {
-  CalendarIcon,
   CheckIcon,
-  CurrencyDollarIcon,
-  LinkIcon,
-  MapPinIcon,
   PencilIcon,
 } from "@heroicons/react/20/solid";
 import { QuarryDataset } from "../data/datasets";
@@ -78,7 +74,7 @@ export default function Market() {
             </thead>
             <tbody className="divide-y divide-gray-200 bg-white">
               {QuarryDataset.map((dataset) => (
-                <tr key={dataset.publisher}>
+                <tr key={dataset.id}>
                   <td className="w-full max-w-0 py-4 pl-4 pr-3 text-sm font-medium text-gray-900 sm:w-auto sm:max-w-none sm:pl-6">
                     {dataset.name}
                     <dl className="font-normal lg:hidden">

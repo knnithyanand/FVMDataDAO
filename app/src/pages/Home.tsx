@@ -1,4 +1,4 @@
-import { Navbar, Welcome, Services, Transactions, Footer } from "../components";
+import { Welcome, Services, Transactions } from "../components";
 
 export default function Home() {
   return (
