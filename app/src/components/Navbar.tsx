@@ -5,7 +5,7 @@ import logo from "../images/logo.png";
 const navigation = [
   { name: "Market", href: "/market" },
   { name: "Exchange", href: "/exchange" },
-  { name: "Wallet", href: "/wallet" },
+  { name: "Wallet", href: "/empty" },
   { name: "My Data", href: "/,y-data" },
 ];
 export default function Navbar() {
