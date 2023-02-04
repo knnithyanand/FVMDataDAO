@@ -1,0 +1,9 @@
+---
+- name: Upload application
+  become: true
+  ansible.builtin.unarchive:
+    src: "{{ artifact_name }}.zip"
+    dest: /var/www/{{ site_name }}
+    owner: root
+    group: root
+    mode: 0755

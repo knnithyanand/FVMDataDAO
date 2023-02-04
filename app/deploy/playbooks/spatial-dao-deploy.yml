@@ -1,0 +1,47 @@
+---
+- name: Prepare localhost
+  tags: never, bootstrap
+  hosts: localhost
+  gather_facts: false
+
+  vars_files:
+    - vars/main.yml
+
+  tasks:
+    - name: SSH Keyscan
+      ansible.builtin.shell:
+        cmd: ssh-keyscan -H -t rsa {{ item }}
+      loop: "{{ groups['all'] }}"
+      retries: 3
+      delay: 10
+      until: keyscan is succeeded
+      changed_when: false
+      register: keyscan
+
+    - name: Add to known_hosts
+      ansible.builtin.blockinfile:
+        path: ~/.ssh/known_hosts
+        block: "{{ keyscan.results | map(attribute='stdout') | join('\n') }}"
+        state: present
+        create: true
+        mode: 0600
+      no_log: false
+
+    - name: Print variables
+      ansible.builtin.debug:
+        var: "{{ item }}"
+      loop:
+        - site_name
+        - package_name
+        - artifact_name
+
+- name: Upload application
+  tags: site
+  hosts: web
+
+  vars_files:
+    - vars/main.yml
+
+  roles:
+    - role: site
+      tags: site
