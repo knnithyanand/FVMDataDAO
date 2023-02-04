@@ -57,7 +57,7 @@ jobs:
         uses: actions/upload-artifact@v2
         with:
           name: ${{ env.ARTIFACT_NAME }}
-          path: ${{ env.APP_ARTIFACT_DIR }}
+          path: ${{ env.APP_DIR }}/${{ env.APP_ARTIFACT_DIR }}
 
   deploy:
     needs: build
