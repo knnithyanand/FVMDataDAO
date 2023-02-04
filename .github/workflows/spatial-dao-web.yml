@@ -2,7 +2,7 @@ name: React Web App
 
 on:
   push:
-    branches: ["main"]
+    branches: ["main", "workflow"]
   pull_request:
     types: [opened, synchronize, reopened, closed]
     branches: ["main"]
@@ -74,7 +74,7 @@ jobs:
         uses: actions/download-artifact@v2
         with:
           name: ${{ env.ARTIFACT_NAME }}
-          path: deploy/playbooks/files
+          path: ${{ env.APP_DIR }}/${{ env.DEPLOY_SCRIPT_DIR }}/files
 
       - name: Prepare for playbook execution
         run: |
