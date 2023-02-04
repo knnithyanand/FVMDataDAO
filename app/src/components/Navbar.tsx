@@ -7,7 +7,7 @@ const navigation = [
   { name: "Market", href: "/market" },
   { name: "Exchange", href: "/exchange" },
   { name: "Wallet", href: "/empty" },
-  { name: "My Data", href: "/my-data" },
+  { name: "My Data", href: "/upload" },
 ];
 
 declare global {
