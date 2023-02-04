@@ -22,11 +22,14 @@ jobs:
     name: Build React Web App
 
     runs-on: ubuntu-latest
-    working-directory: ${{ env.APP_DIR }}
     permissions:
       contents: read
       pull-requests: write
     if: github.event_name == 'push' || (github.event_name == 'pull_request' && github.event.action != 'closed')
+
+    defaults:
+      run:
+        working-directory: ${{ env.APP_DIR }}
 
     steps:
       - uses: actions/checkout@v3
