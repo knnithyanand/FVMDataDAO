@@ -9,10 +9,10 @@ on:
 
 # Environment variables available to all jobs and steps in this workflow
 env:
-  APP_LOCATION: app
+  APP_DIR: app
   ARTIFACT_NAME: app_${{ github.ref_name }}_${{ github.run_number }}_${{ github.run_attempt }}
-  APP_ARTIFACT_LOCATION: /build
-  DEPLOY_SCRIPT_LOCATION: ${{ env.APP_LOCATION }}/deploy
+  APP_ARTIFACT_DIR: build
+  DEPLOY_SCRIPT_DIR: deploy
 
 permissions:
   contents: read
@@ -22,7 +22,7 @@ jobs:
     name: Build React Web App
 
     runs-on: ubuntu-latest
-    working-directory: ${{ env.APP_LOCATION }}
+    working-directory: ${{ env.APP_DIR }}
     permissions:
       contents: read
       pull-requests: write
@@ -54,7 +54,7 @@ jobs:
         uses: actions/upload-artifact@v2
         with:
           name: ${{ env.ARTIFACT_NAME }}
-          path: ${{ env.APP_ARTIFACT_LOCATION }}
+          path: ${{ env.APP_ARTIFACT_DIR }}
 
   deploy:
     needs: build
@@ -62,7 +62,7 @@ jobs:
 
     defaults:
       run:
-        working-directory: ${{ env.DEPLOY_SCRIPT_LOCATION }}
+        working-directory: ${{ env.APP_DIR }}/${{ env.DEPLOY_SCRIPT_DIR }}
 
     steps:
       - uses: actions/checkout@v3
