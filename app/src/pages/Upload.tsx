@@ -1,5 +1,3 @@
-import { CheckIcon, PencilIcon } from "@heroicons/react/24/outline";
-
 export default function Empty() {
   return (
     <div className="container mx-auto py-8 sm:px-6">
