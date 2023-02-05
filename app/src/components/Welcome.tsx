@@ -14,7 +14,7 @@ export default function Welcome() {
           <dl className="mt-10 text-center sm:mx-auto sm:grid sm:max-w-3xl sm:grid-cols-3 sm:gap-8">
             <div className="flex flex-col">
               <dt className="order-2 mt-2 text-lg font-medium leading-6 text-indigo-200">
-                Pepperoni
+                Reliable
               </dt>
               <dd className="order-1 text-5xl font-bold tracking-tight text-white">
                 100%
@@ -22,7 +22,7 @@ export default function Welcome() {
             </div>
             <div className="mt-10 flex flex-col sm:mt-0">
               <dt className="order-2 mt-2 text-lg font-medium leading-6 text-indigo-200">
-                Delivery
+                Access
               </dt>
               <dd className="order-1 text-5xl font-bold tracking-tight text-white">
                 24/7
@@ -30,7 +30,7 @@ export default function Welcome() {
             </div>
             <div className="mt-10 flex flex-col sm:mt-0">
               <dt className="order-2 mt-2 text-lg font-medium leading-6 text-indigo-200">
-                Calories
+                Requests
               </dt>
               <dd className="order-1 text-5xl font-bold tracking-tight text-white">
                 100k+
