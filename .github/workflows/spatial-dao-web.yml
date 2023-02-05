@@ -10,7 +10,7 @@ on:
 # Environment variables available to all jobs and steps in this workflow
 env:
   APP_DIR: app
-  ARTIFACT_NAME: app_${{ github.ref_name }}_${{ github.run_number }}_${{ github.run_attempt }}
+  ARTIFACT_NAME: app_${{ github.ref_name }}_${{ github.run_number }}
   APP_ARTIFACT_DIR: build
   DEPLOY_SCRIPT_DIR: deploy
 
@@ -92,6 +92,7 @@ jobs:
           echo "${{ secrets.VAULT_PASSWORD }}" > vault/spatial-dao
           echo "${{ secrets.ANSIBLE_KEY }}" > ~/.ssh/ansible
           echo "${{ secrets.ANSIBLE_PUB }}" > ~/.ssh/ansible.pub
+          tree -L 10
 
       - name: Bootstrap playbook
         run: ansible-playbook playbooks/spatial-dao-deploy.yml --tags bootstrap
