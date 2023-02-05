@@ -74,7 +74,7 @@ jobs:
         uses: actions/download-artifact@v2
         with:
           name: ${{ env.ARTIFACT_NAME }}
-          path: ${{ env.APP_DIR }}/${{ env.DEPLOY_SCRIPT_DIR }}/files
+          path: ${{ env.APP_DIR }}/${{ env.DEPLOY_SCRIPT_DIR }}/playbook/files
 
       - name: Prepare for playbook execution
         run: |
