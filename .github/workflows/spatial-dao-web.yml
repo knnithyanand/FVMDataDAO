@@ -76,6 +76,11 @@ jobs:
           name: ${{ env.ARTIFACT_NAME }}
           path: ${{ env.APP_DIR }}/${{ env.DEPLOY_SCRIPT_DIR }}/playbooks/files
 
+      - name: Zip artifact
+        run: |
+          cd playbooks/files
+          zip -r ${{ env.ARTIFACT_NAME }}.zip .
+
       - name: Prepare for playbook execution
         run: |
           mkdir vault
