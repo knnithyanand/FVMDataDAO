@@ -3,7 +3,29 @@
   become: true
   ansible.builtin.unarchive:
     src: "{{ artifact_name }}.zip"
-    dest: /var/www/{{ site_name }}
+    dest: /var/www/{{ artifact_name }}
     owner: root
     group: root
     mode: 0755
+
+- name: Copy NGINX configuration
+  become: true
+  ansible.builtin.template:
+    src: site.conf.j2
+    dest: /etc/nginx/sites-available/{{ artifact_name }}.conf
+    owner: root
+    group: root
+    mode: 0644
+
+- name: Enable NGINX configuration
+  become: true
+  ansible.builtin.file:
+    src: /etc/nginx/sites-available/{{ artifact_name }}.conf
+    dest: /etc/nginx/sites-enabled/default
+    state: link
+
+- name: Restart NGINX
+  become: true
+  ansible.builtin.service:
+    name: nginx
+    state: restarted
