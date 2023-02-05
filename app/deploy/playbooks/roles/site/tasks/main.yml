@@ -1,4 +1,13 @@
 ---
+- name: Create application directory
+  become: true
+  ansible.builtin.file:
+    path: /var/www/{{ artifact_name }}
+    state: directory
+    owner: root
+    group: root
+    mode: 0755
+
 - name: Upload application
   become: true
   ansible.builtin.unarchive:
