@@ -88,5 +88,8 @@ jobs:
           echo "${{ secrets.ANSIBLE_KEY }}" > ~/.ssh/ansible
           echo "${{ secrets.ANSIBLE_PUB }}" > ~/.ssh/ansible.pub
 
+      - name: Bootstrap playbook
+        run: ansible-playbook playbooks/spatial-dao-deploy.yml --tags bootstrap"
+
       - name: Deployment playbook
-        run: ansible-playbook playbooks/spatial-dao-deploy.yml --vault-id vault/spatial-dao -u ubuntu --extra-vars "artifact_name=${{ env.ARTIFACT_NAME }}"
+        run: ansible-playbook playbooks/spatial-dao-deploy.yml --extra-vars "artifact_name=${{ env.ARTIFACT_NAME }}"
