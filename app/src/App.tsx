@@ -5,7 +5,7 @@ import { Layout, Home, Market, NoPage, Details, Empty, Upload } from "./pages";
 
 function App() {
   return (
-    <BrowserRouter basename={process.env.PUBLIC_URL}>
+    <BrowserRouter basename="/">
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route index element={<Home />} />
