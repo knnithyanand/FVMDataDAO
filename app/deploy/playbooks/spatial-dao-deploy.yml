@@ -4,9 +4,6 @@
   hosts: localhost
   gather_facts: false
 
-  vars_files:
-    - vars/main.yml
-
   tasks:
     - name: SSH Keyscan
       ansible.builtin.shell:
@@ -38,9 +35,6 @@
 - name: Upload application
   tags: site
   hosts: web
-
-  vars_files:
-    - vars/main.yml
 
   roles:
     - role: site
