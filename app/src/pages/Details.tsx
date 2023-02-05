@@ -69,28 +69,28 @@ export default function Details() {
               Dataset Information
             </h3>
             <p className="mt-1 max-w-2xl text-sm text-gray-500">
-              Personal details and application.
+              Metadata about the Dataset and the Publisher.
             </p>
           </div>
           <div className="border-t border-gray-200">
             <dl>
               <div className="bg-gray-50 px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
-                <dt className="text-sm font-medium text-gray-500">Full name</dt>
+                <dt className="text-sm font-medium text-gray-500">Name</dt>
                 <dd className="mt-1 text-sm text-gray-900 sm:col-span-2 sm:mt-0">
-                  Margot Foster
+                  Quarry Data 2005
                 </dd>
               </div>
               <div className="bg-white px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
                 <dt className="text-sm font-medium text-gray-500">
-                  Application for
+                  Location
                 </dt>
                 <dd className="mt-1 text-sm text-gray-900 sm:col-span-2 sm:mt-0">
-                  Backend Developer
+                  Kerala, India
                 </dd>
               </div>
               <div className="bg-gray-50 px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
                 <dt className="text-sm font-medium text-gray-500">
-                  Email address
+                  Owner Email
                 </dt>
                 <dd className="mt-1 text-sm text-gray-900 sm:col-span-2 sm:mt-0">
                   margotfoster@example.com
@@ -98,14 +98,14 @@ export default function Details() {
               </div>
               <div className="bg-white px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
                 <dt className="text-sm font-medium text-gray-500">
-                  Salary expectation
+                  Price
                 </dt>
                 <dd className="mt-1 text-sm text-gray-900 sm:col-span-2 sm:mt-0">
-                  $120,000
+                  $120
                 </dd>
               </div>
               <div className="bg-gray-50 px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
-                <dt className="text-sm font-medium text-gray-500">About</dt>
+                <dt className="text-sm font-medium text-gray-500">Description</dt>
                 <dd className="mt-1 text-sm text-gray-900 sm:col-span-2 sm:mt-0">
                   Fugiat ipsum ipsum deserunt culpa aute sint do nostrud anim
                   incididunt cillum culpa consequat. Excepteur qui ipsum aliquip
@@ -127,7 +127,7 @@ export default function Details() {
                           aria-hidden="true"
                         />
                         <span className="ml-2 w-0 flex-1 truncate">
-                          resume_back_end_developer.pdf
+                          quarry_data_ker_2005.csv
                         </span>
                       </div>
                       <div className="ml-4 flex-shrink-0">
@@ -146,7 +146,7 @@ export default function Details() {
                           aria-hidden="true"
                         />
                         <span className="ml-2 w-0 flex-1 truncate">
-                          coverletter_back_end_developer.pdf
+                        quarry_data_ker_2005.json
                         </span>
                       </div>
                       <div className="ml-4 flex-shrink-0">
