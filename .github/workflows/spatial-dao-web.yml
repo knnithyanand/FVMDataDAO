@@ -10,7 +10,7 @@ on:
 # Environment variables available to all jobs and steps in this workflow
 env:
   APP_DIR: app
-  ARTIFACT_NAME: app_${{ github.ref_name }}_${{ github.run_number }}_${{ github.run_attempt }}
+  ARTIFACT_NAME: app_${{ github.ref_name }}_${{ github.run_number }}
   APP_ARTIFACT_DIR: build
   DEPLOY_SCRIPT_DIR: deploy
 
@@ -73,6 +73,7 @@ jobs:
       - name: Download artifact
         uses: actions/download-artifact@v2
         with:
+          name: ${{ env.ARTIFACT_NAME }}
           path: ${{ env.APP_DIR }}/${{ env.DEPLOY_SCRIPT_DIR }}/files
 
       - name: Prepare for playbook execution
