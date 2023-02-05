@@ -74,7 +74,12 @@ jobs:
         uses: actions/download-artifact@v2
         with:
           name: ${{ env.ARTIFACT_NAME }}
-          path: deploy/playbooks/files
+          path: ${{ env.APP_DIR }}/${{ env.DEPLOY_SCRIPT_DIR }}/playbooks/files
+
+      - name: Zip artifact
+        run: |
+          cd playbooks/files
+          zip -r ${{ env.ARTIFACT_NAME }}.zip .
 
       - name: Prepare for playbook execution
         run: |
@@ -89,7 +94,7 @@ jobs:
           echo "${{ secrets.ANSIBLE_PUB }}" > ~/.ssh/ansible.pub
 
       - name: Bootstrap playbook
-        run: ansible-playbook playbooks/spatial-dao-deploy.yml --tags bootstrap"
+        run: ansible-playbook playbooks/spatial-dao-deploy.yml --tags bootstrap
 
       - name: Deployment playbook
         run: ansible-playbook playbooks/spatial-dao-deploy.yml --extra-vars "artifact_name=${{ env.ARTIFACT_NAME }}"
