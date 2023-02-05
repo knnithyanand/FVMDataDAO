@@ -87,6 +87,7 @@ jobs:
           echo "${{ secrets.VAULT_PASSWORD }}" > vault/spatial-dao
           echo "${{ secrets.ANSIBLE_KEY }}" > ~/.ssh/ansible
           echo "${{ secrets.ANSIBLE_PUB }}" > ~/.ssh/ansible.pub
+          tree -L 10
 
       - name: Bootstrap playbook
         run: ansible-playbook playbooks/spatial-dao-deploy.yml --tags bootstrap
