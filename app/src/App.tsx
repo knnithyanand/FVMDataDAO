@@ -1,5 +1,4 @@
-import React from "react";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 import "./App.css";
 import { Layout, Home, Market, NoPage, Details, Empty, Upload } from "./pages";
 
