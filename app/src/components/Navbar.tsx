@@ -1,5 +1,5 @@
 import { ethers } from "ethers";
-import React, { Component, useState } from "react";
+import { Component } from "react";
 
 import logo from "../images/logo.png";
 
@@ -46,6 +46,7 @@ export default class Navbar extends Component {
       const signer = this.provider.getSigner();
       let signature = await signer.signMessage("Spatial DAO");
 
+      console.log(signature);
       this.setState({
         isLogin: true,
         account: addr[0],
